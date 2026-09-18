@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formcast Privacy Policy</title>
+<style>
+  :root{
+    --bg:#f7f8fb; --card:#ffffff; --text:#161a22; --text-dim:#5b6472;
+    --accent:#2f6fed; --border:#e4e7ee; --good:#1f8a5f;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1117; --card:#171a22; --text:#eef0f4; --text-dim:#9aa3b2;
+      --accent:#6d9bff; --border:#272b36; --good:#3ddc97;
+    }
+  }
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Roboto,sans-serif;line-height:1.55;}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 96px;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;}
+  h1{font-size:34px;margin:0 0 6px;letter-spacing:-0.01em;}
+  .updated{color:var(--text-dim);font-size:14px;margin:0 0 40px;}
+  .summary{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px;margin-bottom:40px;}
+  .summary h2{font-size:15px;margin:0 0 12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.04em;}
+  .summary ul{margin:0;padding-left:20px;}
+  .summary li{margin-bottom:8px;}
+  .summary li:last-child{margin-bottom:0;}
+  h2.section{font-size:20px;margin:40px 0 10px;letter-spacing:-0.01em;}
+  p{color:var(--text);margin:0 0 14px;}
+  ul{padding-left:20px;margin:0 0 14px;}
+  li{margin-bottom:6px;}
+  .tag{display:inline-block;background:rgba(47,111,237,.1);color:var(--accent);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-right:6px;}
+  .contact{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px;margin-top:40px;}
+  .contact a{color:var(--accent);text-decoration:none;font-weight:600;}
+  .contact a:hover{text-decoration:underline;}
+  footer{margin-top:48px;color:var(--text-dim);font-size:13px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Formcast</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated September 17, 2026</p>
+
+  <div class="summary">
+    <h2>In short</h2>
+    <ul>
+      <li>Formcast has no servers of its own. Your training data lives only on your device.</li>
+      <li>Your Garmin Connect credentials and AI provider API key are stored only in your device's Keychain — never on a server we run, because we don't run one.</li>
+      <li>The only network calls Formcast makes are directly to Garmin Connect, Apple Health, and the AI provider <em>you</em> choose and pay for — never to Formcast itself.</li>
+      <li>Nothing is sold, shared with advertisers, or used for tracking. There are no ads and no analytics SDKs in this app.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">What Formcast is</h2>
+  <p>Formcast is a native iPhone/iPad app that reads your training and health data from Garmin Connect and/or Apple Health, and uses an AI model to turn it into a daily readiness score, coaching messages, and training plans. It's built and operated by an independent developer, not a company — there is no backend server, no user accounts, and no centralized database of user data.</p>
+
+  <h2 class="section">Data Formcast reads</h2>
+  <p><span class="tag">Garmin Connect</span> — if you sign in, Formcast requests your activities, daily metrics (steps, resting heart rate, stress, Body Battery), sleep, and HRV directly from Garmin's own servers using your Garmin Connect email, password, and 2-factor code. Formcast stores only the resulting session token (not your password) in your device's Keychain.</p>
+  <p><span class="tag">Apple Health</span> — if you grant access, Formcast reads steps, heart rate, HRV, sleep, and workouts through HealthKit. Formcast never writes data back to Health, and per Apple's rules, HealthKit data is never used for advertising or marketing and is never sold.</p>
+
+  <h2 class="section">Where your data goes</h2>
+  <p>All synced data is stored locally on your device, using Apple's on-device SwiftData storage. It is not uploaded to any server operated by Formcast, because none exists.</p>
+  <p>When you use an AI coaching feature (daily briefing, nudges, activity insights, Q&amp;A, weekly review, or plan generation), Formcast sends a compact, text-only summary of the relevant numbers directly from your device to the AI provider you configured in Settings — Anthropic, OpenAI, Google, or a custom endpoint you specify. That request goes straight from your device to that provider's API using the API key you supplied; it never passes through a Formcast server. That provider's own privacy policy and data-retention terms apply to that request. If you enable Apple's on-device model instead, nothing leaves your device at all for that request.</p>
+
+  <h2 class="section">What's stored in the Keychain</h2>
+  <ul>
+    <li>Your Garmin Connect session token (if signed in)</li>
+    <li>Your AI provider API key (if you've added one)</li>
+  </ul>
+  <p>Both are stored using iOS's Keychain, encrypted at rest by the OS, and are never transmitted anywhere by Formcast except directly to Garmin or your chosen AI provider as part of making the requests above.</p>
+
+  <h2 class="section">Deleting your data</h2>
+  <p>Formcast has no account to delete, because it never created one on any server. Everything it knows about you lives on your device, and you can erase all of it at any time from Settings → <em>Delete everything</em> — this signs you out of Garmin, removes your stored API key(s), and wipes every synced activity, health record, and plan from local storage. Uninstalling the app has the same effect.</p>
+
+  <h2 class="section">Children</h2>
+  <p>Formcast is not directed at children and is not knowingly used to collect data from anyone under 13.</p>
+
+  <h2 class="section">Changes</h2>
+  <p>If this policy changes, the "last updated" date above will change with it. Material changes will be reflected in the app's release notes.</p>
+
+  <div class="contact">
+    <strong>Questions about this policy?</strong><br>
+    Email <a href="mailto:melle@vanderbrugge.net">melle@vanderbrugge.net</a>
+  </div>
+
+  <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd. or Apple Inc.</footer>
+</div>
+</body>
+</html>

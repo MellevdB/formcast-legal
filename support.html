@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formcast Support</title>
+<style>
+  :root{
+    --bg:#f7f8fb; --card:#ffffff; --text:#161a22; --text-dim:#5b6472;
+    --accent:#2f6fed; --border:#e4e7ee;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1117; --card:#171a22; --text:#eef0f4; --text-dim:#9aa3b2;
+      --accent:#6d9bff; --border:#272b36;
+    }
+  }
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Roboto,sans-serif;line-height:1.55;}
+  .wrap{max-width:680px;margin:0 auto;padding:56px 24px 96px;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;}
+  h1{font-size:34px;margin:0 0 10px;letter-spacing:-0.01em;}
+  .lede{color:var(--text-dim);font-size:16px;margin:0 0 40px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px;}
+  .card h2{font-size:17px;margin:0 0 8px;}
+  .card p{margin:0 0 4px;color:var(--text-dim);}
+  .card a.btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;font-size:15px;}
+  details{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:12px;}
+  summary{font-weight:600;cursor:pointer;}
+  details p{margin:12px 0 0;color:var(--text-dim);}
+  h2.section{font-size:20px;margin:44px 0 14px;letter-spacing:-0.01em;}
+  footer{margin-top:48px;color:var(--text-dim);font-size:13px;}
+  a{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Formcast</p>
+  <h1>Support</h1>
+  <p class="lede">Formcast is built and maintained by one person. If something's broken, confusing, or missing, get in touch directly — real emails get read and answered.</p>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Bugs, feature requests, account/data questions, anything else</p>
+    <a class="btn" href="mailto:melle@vanderbrugge.net?subject=Formcast%20support">Email melle@vanderbrugge.net</a>
+  </div>
+
+  <h2 class="section">Common questions</h2>
+
+  <details>
+    <summary>Do I need a Garmin Connect account?</summary>
+    <p>No. Formcast works fully on Apple Health data alone — skip the Garmin sign-in step during setup and grant Health access instead. Connecting Garmin just adds a few extra metrics (Body Battery, stress, richer activity detail) that only Garmin devices report.</p>
+  </details>
+
+  <details>
+    <summary>Do I need to pay for anything?</summary>
+    <p>Formcast itself is free, with no ads and no in-app purchases. The AI coaching features need either Apple's free on-device model (available on newer iPhones) or your own API key from Anthropic, OpenAI, or Google — those providers bill you directly for what you use; Formcast never sees or marks up that cost.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my data?</summary>
+    <p>Settings → Delete everything. This signs you out of Garmin, removes any saved API key, and erases every synced activity, health record and plan from your device. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+  </details>
+
+  <details>
+    <summary>My Garmin sign-in isn't working</summary>
+    <p>Garmin has no official third-party API, so Formcast signs in the same way the Garmin Connect app does — email, password, and a 2-factor code if you have one enabled. If it's failing, double-check your password works in the real Garmin Connect app first, then email support with what step fails.</p>
+  </details>
+
+  <details>
+    <summary>Is my data sent to a Formcast server?</summary>
+    <p>No — there is no Formcast server. Everything stays on your device except the compact summary sent directly from your phone to whichever AI provider you've chosen, to generate your coaching text.</p>
+  </details>
+
+  <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd. or Apple Inc.</footer>
+</div>
+</body>
+</html>
