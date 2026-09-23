@@ -40,7 +40,7 @@
 <div class="wrap">
   <p class="eyebrow">Formcast</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated September 17, 2026</p>
+  <p class="updated">Last updated September 23, 2026</p>
 
   <div class="summary">
     <h2>In short</h2>
@@ -48,16 +48,20 @@
       <li>Formcast has no servers of its own. Your training data lives only on your device.</li>
       <li>Your Garmin Connect credentials and AI provider API key are stored only in your device's Keychain — never on a server we run, because we don't run one.</li>
       <li>The only network calls Formcast makes are directly to Garmin Connect, Apple Health, and the AI provider <em>you</em> choose and pay for — never to Formcast itself.</li>
+      <li>Formcast reads Apple Health data, and writes to it only when you record a workout yourself in the app.</li>
       <li>Nothing is sold, shared with advertisers, or used for tracking. There are no ads and no analytics SDKs in this app.</li>
     </ul>
   </div>
 
   <h2 class="section">What Formcast is</h2>
-  <p>Formcast is a native iPhone/iPad app that reads your training and health data from Garmin Connect and/or Apple Health, and uses an AI model to turn it into a daily readiness score, coaching messages, and training plans. It's built and operated by an independent developer, not a company — there is no backend server, no user accounts, and no centralized database of user data.</p>
+  <p>Formcast is a native iPhone/iPad app that reads your training and health data from Garmin Connect and/or Apple Health, and uses an AI model to turn it into a daily readiness score, coaching messages, and training plans. You can also record a workout live in the app — GPS route, distance, pace and heart rate. It's built and operated by an independent developer, not a company — there is no backend server, no user accounts, and no centralized database of user data.</p>
 
   <h2 class="section">Data Formcast reads</h2>
   <p><span class="tag">Garmin Connect</span> — if you sign in, Formcast requests your activities, daily metrics (steps, resting heart rate, stress, Body Battery), sleep, and HRV directly from Garmin's own servers using your Garmin Connect email, password, and 2-factor code. Formcast stores only the resulting session token (not your password) in your device's Keychain.</p>
-  <p><span class="tag">Apple Health</span> — if you grant access, Formcast reads steps, heart rate, HRV, sleep, and workouts through HealthKit. Formcast never writes data back to Health, and per Apple's rules, HealthKit data is never used for advertising or marketing and is never sold.</p>
+  <p><span class="tag">Apple Health</span> — if you grant access, Formcast reads steps, heart rate, HRV, sleep, and workouts through HealthKit. Per Apple's rules, HealthKit data is never used for advertising or marketing and is never sold.</p>
+
+  <h2 class="section">Data Formcast writes</h2>
+  <p><span class="tag">Apple Health</span> — Formcast writes to Health in exactly one situation: when you tap "Start recording" and record a workout live in the app. That workout — its distance, route, duration, and active energy — is saved to Apple Health the same way any other workout-recording app would save it, so it also shows up in the Fitness app. Formcast never writes to Health at any other time, and never touches any Health data beyond that one workout.</p>
 
   <h2 class="section">Where your data goes</h2>
   <p>All synced data is stored locally on your device, using Apple's on-device SwiftData storage. It is not uploaded to any server operated by Formcast, because none exists.</p>
