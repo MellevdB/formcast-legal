@@ -40,24 +40,25 @@
 <div class="wrap">
   <p class="eyebrow">Formcast</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated September 23, 2026</p>
+  <p class="updated">Last updated September 30, 2026</p>
 
   <div class="summary">
     <h2>In short</h2>
     <ul>
       <li>Formcast has no servers of its own. Your training data lives only on your device.</li>
-      <li>Your Garmin Connect credentials and AI provider API key are stored only in your device's Keychain — never on a server we run, because we don't run one.</li>
-      <li>The only network calls Formcast makes are directly to Garmin Connect, Apple Health, and the AI provider <em>you</em> choose and pay for — never to Formcast itself.</li>
+      <li>You connect exactly one fitness data source — Garmin Connect or Fitbit — not both. Its session token or OAuth token, plus your AI provider API key, are stored only in your device's Keychain — never on a server we run, because we don't run one.</li>
+      <li>The only network calls Formcast makes are directly to Garmin Connect, Google's Health API (for Fitbit), Apple Health, and the AI provider <em>you</em> choose and pay for — never to Formcast itself.</li>
       <li>Formcast reads Apple Health data, and writes to it only when you record a workout yourself in the app.</li>
       <li>Nothing is sold, shared with advertisers, or used for tracking. There are no ads and no analytics SDKs in this app.</li>
     </ul>
   </div>
 
   <h2 class="section">What Formcast is</h2>
-  <p>Formcast is a native iPhone/iPad app that reads your training and health data from Garmin Connect and/or Apple Health, and uses an AI model to turn it into a daily readiness score, coaching messages, and training plans. You can also record a workout live in the app — GPS route, distance, pace and heart rate. It's built and operated by an independent developer, not a company — there is no backend server, no user accounts, and no centralized database of user data.</p>
+  <p>Formcast is a native iPhone/iPad app that reads your training and health data from Garmin Connect, Fitbit (via the Google Health API), and/or Apple Health, and uses an AI model to turn it into a daily readiness score, coaching messages, and training plans. You can also record a workout live in the app — GPS route, distance, pace and heart rate. It's built and operated by an independent developer, not a company — there is no backend server, no user accounts, and no centralized database of user data.</p>
 
   <h2 class="section">Data Formcast reads</h2>
   <p><span class="tag">Garmin Connect</span> — if you sign in, Formcast requests your activities, daily metrics (steps, resting heart rate, stress, Body Battery), sleep, and HRV directly from Garmin's own servers using your Garmin Connect email, password, and 2-factor code. Formcast stores only the resulting session token (not your password) in your device's Keychain.</p>
+  <p><span class="tag">Fitbit (via Google Health API)</span> — if you choose Fitbit instead, you sign in with your Google account through Google's own consent screen, and Formcast requests read-only access to your activity/workout, sleep, and step data through the Google Health API. Formcast never sees your Google password — only an OAuth access token and refresh token, which are stored in your device's Keychain. Formcast's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements: that data is used only to show you your own training and readiness information inside the app, is never sold, and is never used for advertising.</p>
   <p><span class="tag">Apple Health</span> — if you grant access, Formcast reads steps, heart rate, HRV, sleep, and workouts through HealthKit. Per Apple's rules, HealthKit data is never used for advertising or marketing and is never sold.</p>
 
   <h2 class="section">Data Formcast writes</h2>
@@ -69,13 +70,14 @@
 
   <h2 class="section">What's stored in the Keychain</h2>
   <ul>
-    <li>Your Garmin Connect session token (if signed in)</li>
+    <li>Your Garmin Connect session token (if signed in with Garmin)</li>
+    <li>Your Fitbit/Google OAuth access and refresh tokens (if signed in with Fitbit)</li>
     <li>Your AI provider API key (if you've added one)</li>
   </ul>
-  <p>Both are stored using iOS's Keychain, encrypted at rest by the OS, and are never transmitted anywhere by Formcast except directly to Garmin or your chosen AI provider as part of making the requests above.</p>
+  <p>All of these are stored using iOS's Keychain, encrypted at rest by the OS, and are never transmitted anywhere by Formcast except directly to Garmin, Google, or your chosen AI provider as part of making the requests above.</p>
 
   <h2 class="section">Deleting your data</h2>
-  <p>Formcast has no account to delete, because it never created one on any server. Everything it knows about you lives on your device, and you can erase all of it at any time from Settings → <em>Delete everything</em> — this signs you out of Garmin, removes your stored API key(s), and wipes every synced activity, health record, and plan from local storage. Uninstalling the app has the same effect.</p>
+  <p>Formcast has no account to delete, because it never created one on any server. Everything it knows about you lives on your device, and you can erase all of it at any time from Settings → <em>Delete everything</em> — this signs you out of Garmin and/or Fitbit, removes your stored API key(s), and wipes every synced activity, health record, and plan from local storage. Uninstalling the app has the same effect.</p>
 
   <h2 class="section">Children</h2>
   <p>Formcast is not directed at children and is not knowingly used to collect data from anyone under 13.</p>
@@ -88,7 +90,7 @@
     Email <a href="mailto:melle@vanderbrugge.net">melle@vanderbrugge.net</a>
   </div>
 
-  <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd. or Apple Inc.</footer>
+  <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd., Google LLC, Fitbit LLC, or Apple Inc.</footer>
 </div>
 </body>
 </html>

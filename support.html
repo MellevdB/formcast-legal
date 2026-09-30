@@ -48,7 +48,12 @@
 
   <details>
     <summary>Do I need a Garmin Connect account?</summary>
-    <p>No. Formcast works fully on Apple Health data alone — skip the Garmin sign-in step during setup and grant Health access instead. Connecting Garmin just adds a few extra metrics (Body Battery, stress, richer activity detail) that only Garmin devices report.</p>
+    <p>No. Formcast works fully on Apple Health data alone — skip the data-source step during setup and grant Health access instead. Connecting Garmin (or Fitbit) just adds extra metrics from your watch that Apple Health alone doesn't have.</p>
+  </details>
+
+  <details>
+    <summary>Can I use Fitbit instead of Garmin?</summary>
+    <p>Yes — pick Fitbit during setup (or in Settings). Fitbit's own developer API is being retired, so this signs in through the new Google Health API instead: you'll see Google's own sign-in screen, not Fitbit's. Today this syncs your workouts, steps, and sleep; resting heart rate and heart-rate variability aren't available through Google's new API yet. You can only have one data source connected at a time — sign out of Garmin first if you want to switch to Fitbit, or vice versa.</p>
   </details>
 
   <details>
@@ -67,11 +72,16 @@
   </details>
 
   <details>
+    <summary>My Fitbit/Google sign-in isn't working</summary>
+    <p>This app is still in Google's "testing" status while it's new, which means only Google accounts the developer has explicitly added as test users can sign in — everyone else sees an "app not verified" screen. If that's you, email support with the Google account email you'd like added.</p>
+  </details>
+
+  <details>
     <summary>Is my data sent to a Formcast server?</summary>
     <p>No — there is no Formcast server. Everything stays on your device except the compact summary sent directly from your phone to whichever AI provider you've chosen, to generate your coaching text.</p>
   </details>
 
-  <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd. or Apple Inc.</footer>
+  <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd., Google LLC, Fitbit LLC, or Apple Inc.</footer>
 </div>
 </body>
 </html>
