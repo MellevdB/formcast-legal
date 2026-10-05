@@ -58,7 +58,7 @@
 
   <details>
     <summary>Do I need to pay for anything?</summary>
-    <p>Formcast itself is free, with no ads and no in-app purchases. The AI coaching features need either Apple's free on-device model (available on newer iPhones) or your own API key from Anthropic, OpenAI, or Google — those providers bill you directly for what you use; Formcast never sees or marks up that cost.</p>
+    <p>Formcast itself is free, with no ads and no in-app purchases. The AI coaching features need either Apple's free on-device model (available on newer iPhones) or your own API key from Anthropic, OpenAI, or Google — those providers bill you directly for what you use; Formcast never sees or marks up that cost. An API key is <em>not</em> the same as a ChatGPT, Claude or Gemini subscription: the API is a separate pay-per-use account on the provider's developer site (platform.openai.com, console.anthropic.com or aistudio.google.com), where you add a payment method or credit first — $5 is plenty to start, and the coach costs a few cents a day. Without credit every request fails; the app tells you so.</p>
   </details>
 
   <details>
@@ -87,8 +87,13 @@
   </details>
 
   <details>
+    <summary>Which AI model does Formcast use, and what if it says a model isn't available?</summary>
+    <p>You don't have to choose one. By default Formcast asks your provider which models your key can use and picks the best fit (Claude Sonnet, GPT mini or Gemini Flash), then adopts newer ones by itself. If your account refuses a model, Formcast tries the next best one automatically. If every model fails, it nearly always means the provider account has no payment method or credit yet — an API key is billed separately from a ChatGPT, Claude or Gemini subscription — so add one at the provider's developer site and try again. You can still pick a specific model under Settings → Coach engine → Model; the list only shows models your account can use.</p>
+  </details>
+
+  <details>
     <summary>How much does the AI coach cost me, and can I cap it?</summary>
-    <p>Settings → AI usage shows this month's calls, tokens and an approximate cost, using your provider's own token counts when it reports them (otherwise a size-based estimate; the cost uses rough list prices and can differ from your bill). Under <em>Daily call limit</em> you can cap how many AI calls Formcast makes per day; once reached, the coach waits until tomorrow. <em>Max output per call</em> caps how long each AI answer can be (2,500 tokens is recommended; normal answers are 100–600), and a request whose input would exceed about 15,000 tokens is refused before it's sent. Tap the ⓘ next to the section title for a plain-language explanation of calls and tokens. A normal day is about three calls (daily briefing, weekly review, notifications); a 12-week plan takes about 13. The on-device Apple model is free and isn't counted. For a hard spending cap, also set a monthly limit in your provider's dashboard.</p>
+    <p>Settings → AI usage shows this month's calls, tokens and an approximate cost, using your provider's own token counts when it reports them (otherwise a size-based estimate; the cost uses rough list prices and can differ from your bill). Under <em>Daily call limit</em> you can cap how many AI calls Formcast makes per day (25, 50 — recommended —, 100 or 200); once reached, the coach waits until tomorrow. Calls your provider refuses (wrong key, no credit) aren't counted. <em>Max output per call</em> caps how long each AI answer can be (2,500 tokens is recommended; normal answers are 100–600), and a request whose input would exceed about 15,000 tokens is refused before it's sent. Tap the ⓘ next to the section title for a plain-language explanation of calls and tokens. A normal day is about three calls (daily briefing, weekly review, notifications) plus one per question, chart insight or workout read — the first day, while you look around, can be 10 to 20; a 12-week plan takes about 13. The on-device Apple model is free and isn't counted. For a hard spending cap, also set a monthly limit in your provider's dashboard.</p>
   </details>
 
   <details>
