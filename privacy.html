@@ -40,14 +40,15 @@
 <div class="wrap">
   <p class="eyebrow">Formcast</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated October 9, 2026</p>
+  <p class="updated">Last updated November 2, 2026</p>
 
   <div class="summary">
     <h2>In short</h2>
     <ul>
-      <li>Formcast has no servers of its own. Your training data lives only on your device.</li>
+      <li>Formcast has no servers of its own. Your training data lives on your device. The only exception is what you yourself choose to post in an optional friends circle, which is stored in iCloud (see "Friends circles" below).</li>
       <li>You connect exactly one fitness data source — Garmin Connect or Fitbit — not both. Its session token or OAuth token, plus your AI provider API key, are stored only in your device's Keychain — never on a server we run, because we don't run one.</li>
-      <li>The only network calls Formcast makes are directly to Garmin Connect, Google's Health API (for Fitbit), Apple Health, and the AI provider <em>you</em> choose and pay for — never to Formcast itself.</li>
+      <li>The only network calls Formcast makes are directly to Garmin Connect, Google's Health API (for Fitbit), Apple Health, the AI provider <em>you</em> choose and pay for, and — only if you use friends circles — Apple's iCloud. Never to a Formcast server, because there is none.</li>
+      <li>Friends circles are optional. Sleep, weight and coach texts are never shared; pace, heart rate, a route and similar details only go along when you tick them on an activity you post.</li>
       <li>Formcast reads Apple Health data, and writes to it only when you record a workout yourself in the app.</li>
       <li>Nothing is sold, shared with advertisers, or used for tracking. There are no ads and no analytics SDKs in this app.</li>
     </ul>
@@ -63,6 +64,21 @@
 
   <h2 class="section">Data Formcast writes</h2>
   <p><span class="tag">Apple Health</span> — Formcast writes to Health in exactly one situation: when you tap "Start recording" and record a workout live in the app. That workout — its distance, route, duration, and active energy — is saved to Apple Health the same way any other workout-recording app would save it, so it also shows up in the Fitness app. Formcast never writes to Health at any other time, and never touches any Health data beyond that one workout.</p>
+
+    <h2 class="section">Friends circles (optional)</h2>
+  <p>The Friends tab lets you form small circles with friends. Nothing is sent to iCloud until you agree to the circle rules in that tab, and you can stay out of circles entirely. Circles run on Apple's iCloud (CloudKit) — Formcast still has no server of its own, and the developer cannot read what is in a circle: it lives in the iCloud accounts of the people in it.</p>
+  <p><span class="tag">What goes into a circle</span></p>
+  <ul>
+    <li>A nickname you choose and a random member ID (not your name, email or Apple ID).</li>
+    <li>Every week and month, automatically: your number of sessions, minutes and distance, your streak of weeks that you met your own weekly session goal, and that goal. If you switch it on, a small green/yellow/red readiness dot as well (only the colour — never the numbers behind it).</li>
+    <li>Activities you post yourself, one at a time: the title, sport, date, time, duration and distance. Per post you can add more, and only if you tick it: pace or speed, average and maximum heart rate, calories, elevation gain, the exercises with sets, reps and weight (strength), and a route on a map. A route is reduced to about 100 points and, unless you turn that off, its first and last 200 metres are left out so it doesn't show where you live. A preview in the app shows exactly what friends will see before you post.</li>
+    <li>Your likes (emoji) and comments, with your nickname, and the circle's name and goals set by its owner.</li>
+  </ul>
+  <p>Never shared with a circle: sleep, weight, the coach's texts, your notes, your journal, or anything from Garmin, Fitbit or Apple Health that you didn't post yourself.</p>
+  <p><span class="tag">Who can see it</span> People in the same circle see what is listed above, under your nickname. A circle is created in the owner's iCloud and joined through an invitation link; <strong>anyone who has the link can join</strong>, so share it only with people you trust. Circle content is stored by Apple in iCloud under Apple's own terms and privacy policy, and members can of course screenshot or remember what they see.</p>
+  <p><span class="tag">Notifications</span> To tell you about news (a like, a comment, a shared activity, a goal reached) Formcast uses iCloud's silent change notifications and local notifications on your device, and checks when the app opens and in the background. If you agree to the circle rules, the app asks for notification permission; you can refuse it and still use circles.</p>
+  <p><span class="tag">Rules, reporting and blocking</span> Comments are checked on your device for insults and similar content before they are posted. You can report a comment: that opens a pre-filled email to the developer with the circle's name, the author's nickname and member ID, the comment's ID and its text — it is only sent if you press send in your mail app. You can block a member (stored only on your device, it hides their content for you) and delete your own comments; a circle's owner can delete any comment. Reports are read by the developer, who cannot open a circle's content (it is in the members' iCloud accounts), and are acted on where possible — for example by contacting the circle's owner.</p>
+  <p><span class="tag">Leaving and deleting</span> In Settings → Friends → My circles you can leave a circle, which removes your status, posted activities, likes and comments from it, or, as the owner, delete the circle for everyone in it. Stopping a post removes it together with its likes and comments. <strong>"Delete everything" in Settings does not leave your circles</strong> — what you shared there stays until you leave or delete the circle yourself. Apple's iCloud keeps the circle's data until it is removed.</p>
 
   <h2 class="section">Where your data goes</h2>
   <p>All synced data is stored locally on your device, using Apple's on-device SwiftData storage. It is not uploaded to any server operated by Formcast, because none exists.</p>
@@ -82,7 +98,7 @@
   <p>All of these are stored using iOS's Keychain, encrypted at rest by the OS, and are never transmitted anywhere by Formcast except directly to Garmin, Google, or your chosen AI provider as part of making the requests above.</p>
 
   <h2 class="section">Deleting your data</h2>
-  <p>Formcast has no account to delete, because it never created one on any server. Everything it knows about you lives on your device, and you can erase all of it at any time from Settings → <em>Delete everything</em> — this signs you out of Garmin and/or Fitbit, removes your stored API key(s), and wipes every synced activity, health record, and plan from local storage. Uninstalling the app has the same effect.</p>
+  <p>Formcast has no account to delete, because it never created one on any server. Everything it knows about you lives on your device, and you can erase all of it at any time from Settings → <em>Delete everything</em> — this signs you out of Garmin and/or Fitbit, removes your stored API key(s), and wipes every synced activity, health record, and plan from local storage. Uninstalling the app has the same effect. The one thing this does not remove is what you shared in friends circles: that lives in iCloud, so leave or delete your circles first (Settings → Friends → My circles) — see "Friends circles" above.</p>
 
   <h2 class="section">Children</h2>
   <p>Formcast is not directed at children and is not knowingly used to collect data from anyone under 13.</p>

@@ -63,7 +63,7 @@
 
   <details>
     <summary>How do I delete my data?</summary>
-    <p>Settings → Delete everything. This signs you out of Garmin, removes any saved API key, and erases every synced activity, health record and plan from your device. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <p>Settings → Delete everything. This signs you out of Garmin, removes any saved API key, and erases every synced activity, health record and plan from your device. It does not leave friends circles: what you shared there lives in iCloud, so leave or delete your circles first (Settings → Friends → My circles). See the <a href="privacy.html">Privacy Policy</a> for details.</p>
   </details>
 
   <details>
@@ -163,7 +163,37 @@
 
   <details>
     <summary>Is my data sent to a Formcast server?</summary>
-    <p>No — there is no Formcast server. Everything stays on your device except the compact summary (including the aim and notes you entered in the PT intake) sent directly from your phone to whichever AI provider you've chosen, to generate your coaching text.</p>
+    <p>No — there is no Formcast server. Everything stays on your device except the compact summary (including the aim and notes you entered in the PT intake) sent directly from your phone to whichever AI provider you've chosen, to generate your coaching text, and — only if you use friends circles — what you choose to share in a circle, which is stored in iCloud.</p>
+  </details>
+
+  <details>
+    <summary>How do friends circles work, and what do my friends see?</summary>
+    <p>Open the Friends tab, agree to the circle rules, and create a circle or open an invitation link someone sent you. In a circle you see each other's week (sessions against your own goal, streak, optionally a readiness dot), shared goals and a feed of activities that people post. Friends see your nickname, your weekly and monthly totals and the activities you post — never your sleep, weight or coach texts. Circles run on iCloud; there is no Formcast server. Anyone with the invitation link can join, so only share it with people you trust. Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+  </details>
+
+  <details>
+    <summary>How do I post an activity, and choose what goes along (pace, heart rate, route)?</summary>
+    <p>In Activities, press and hold an activity and choose <em>Post in a circle…</em> (or open the Friends tab and tap <em>Post an activity</em>). Switch on what you want to add: pace or speed, heart rate, calories, elevation gain, exercises and sets, and a route on a map. Everything is off until you switch it on, and your choices are remembered. Title, sport, date, time and distance always go along. The route is thinned out and, by default, its first and last 200 m are hidden so it doesn't show where you live. Under <em>What friends will see</em> you get a preview. You can post in several circles, change a post with <em>Update</em> or remove it with the bin button.</p>
+  </details>
+
+  <details>
+    <summary>I ticked pace, heart rate or a route, but my friends don't see it</summary>
+    <p>Details travel with the post through iCloud, and everyone in the circle needs a recent build of Formcast (build 26 or later) to see them. If the app says the post was placed without the extra details, update Formcast and use <em>Update</em> on the post again. If it still doesn't work, email support with the build number from Settings.</p>
+  </details>
+
+  <details>
+    <summary>How do I leave a circle or delete what I shared?</summary>
+    <p>Settings → Friends → <em>My circles</em>: tap <em>Leave</em> next to a circle to remove your status, posted activities, likes and comments from it, or <em>Delete</em> if you made the circle (this removes it for everyone in it). Using <em>Delete everything</em> in Settings does <strong>not</strong> leave your circles, so leave them first.</p>
+  </details>
+
+  <details>
+    <summary>How do I report or block someone?</summary>
+    <p>Open the comments, tap the three dots next to a comment and choose <em>Report</em> (this opens a pre-filled email to the developer; it is only sent if you send it) or <em>Block</em> (hides that person's content for you, stored on your phone only). Unblock in Settings → Friends. A circle's owner can delete any comment. The developer reads every report but cannot open a circle's content (it lives in the members' iCloud accounts), so action usually goes through the circle's owner.</p>
+  </details>
+
+  <details>
+    <summary>My workouts from Apple Health don't show up, but Health has them</summary>
+    <p>Almost always Formcast isn't allowed to <em>read</em> workouts: steps can come through while workouts don't, and Apple gives no error for this. Open Formcast → Settings → <em>Test Apple Health connection</em>: it says whether Health was ever asked (then tap <em>Ask for Workouts access</em>) or whether Workouts is switched off. If it is off, open the iPhone Settings app → Apps → Health → Data Access &amp; Devices → Formcast, tap <em>Change Access</em> and switch <em>Workouts</em> on. Then go back to the test screen and tap <em>Import now (last 90 days)</em>. Note: apps that only <em>write</em> workouts to Health (shown under "Allow Formcast to Write") are a separate permission.</p>
   </details>
 
   <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd., Google LLC, Fitbit LLC, or Apple Inc.</footer>
