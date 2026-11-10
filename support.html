@@ -63,7 +63,7 @@
 
   <details>
     <summary>How do I delete my data?</summary>
-    <p>Settings → Delete everything. This signs you out of Garmin, removes any saved API key, and erases every synced activity, health record and plan from your device. It also leaves all your friends circles, so what you shared there is removed too (a circle you made is deleted for everyone in it); if iCloud can't be reached at that moment the app tells you and you can leave them later in Settings → Friends → My circles. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <p>Settings → Your data → Delete everything. This signs you out of Garmin, removes any saved API key, and erases every synced activity, health record and plan from your device. It also leaves all your friends circles, so what you shared there is removed too (a circle you made is deleted for everyone in it); if iCloud can't be reached at that moment the app tells you and you can leave them later in Settings → Friends → My circles. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
   </details>
 
   <details>
@@ -93,7 +93,7 @@
 
   <details>
     <summary>Where is my data backed up, and how do I restore it?</summary>
-    <p>Formcast writes a backup file of everything you created yourself (routines, weigh-ins, workouts you logged or recorded, journal, plans and goals) after each gym workout and weigh-in, and at most once a day when you open the app. The last seven are kept in the Files app under <em>On My iPhone → Formcast → Backups</em>, and they are part of your iPhone's own iCloud or computer backup. To restore, go to Settings → <em>Back-up</em> → <em>Restore from a back-up…</em> and pick a file: only what is missing is added, nothing is overwritten. Data synced from Garmin, Fitbit or Apple Health isn't in the file — it comes back by syncing.</p>
+    <p>Formcast writes a backup file of everything you created yourself (routines, weigh-ins, workouts you logged or recorded, journal, plans and goals) after each gym workout and weigh-in, and at most once a day when you open the app. The last seven are kept in the Files app under <em>On My iPhone → Formcast → Backups</em>, and they are part of your iPhone's own iCloud or computer backup. To restore, go to Settings → Your data → <em>Restore from a back-up…</em> and pick a file: only what is missing is added, nothing is overwritten. Data synced from Garmin, Fitbit or Apple Health isn't in the file — it comes back by syncing.</p>
   </details>
 
   <details>
@@ -123,7 +123,7 @@
 
   <details>
     <summary>Fitbit is connected but nothing arrives</summary>
-    <p>Go to Settings → <em>Test Fitbit connection</em>. It asks Google for each kind of data (workouts, steps, sleep, resting heart rate, HRV) and shows how many it found or the exact error; send a screenshot with your feedback. Fitbit data comes through your Google account (the Google Health API) — while Formcast is in Google's testing phase, only e-mail addresses on its tester list can connect and the sign-in has to be renewed every 7 days.</p>
+    <p>Go to Settings → Data source → <em>Test Fitbit connection</em>. It asks Google for each kind of data (workouts, steps, sleep, resting heart rate, HRV) and shows how many it found or the exact error; send a screenshot with your feedback. Fitbit data comes through your Google account (the Google Health API) — while Formcast is in Google's testing phase, only e-mail addresses on its tester list can connect and the sign-in has to be renewed every 7 days.</p>
   </details>
 
   <details>
@@ -143,12 +143,12 @@
 
   <details>
     <summary>Which AI model does Formcast use, and what if it says a model isn't available?</summary>
-    <p>You don't have to choose one. By default Formcast asks your provider which models your key can use and picks the best fit (Claude Sonnet, GPT mini or Gemini Flash), then adopts newer ones by itself. If your account refuses a model, Formcast tries the next best one automatically. If every model fails, it nearly always means the provider account has no payment method or credit yet — an API key is billed separately from a ChatGPT, Claude or Gemini subscription — so add one at the provider's developer site and try again. You can still pick a specific model under Settings → Coach engine → Model; the list only shows models your account can use.</p>
+    <p>You don't have to choose one. By default Formcast asks your provider which models your key can use and picks the best fit (Claude Sonnet, GPT mini or Gemini Flash), then adopts newer ones by itself. If your account refuses a model, Formcast tries the next best one automatically. If every model fails, it nearly always means the provider account has no payment method or credit yet — an API key is billed separately from a ChatGPT, Claude or Gemini subscription — so add one at the provider's developer site and try again. You can still pick a specific model under Settings → AI provider → Model; the list only shows models your account can use.</p>
   </details>
 
   <details>
     <summary>How much does the AI coach cost me, and can I cap it?</summary>
-    <p>Settings → AI usage shows this month's calls, tokens and an approximate cost, using your provider's own token counts when it reports them (otherwise a size-based estimate; the cost uses rough list prices and can differ from your bill). Under <em>Daily call limit</em> you can cap how many AI calls Formcast makes per day (25, 50 — recommended —, 100 or 200); once reached, the coach waits until tomorrow. Calls your provider refuses (wrong key, no credit) aren't counted. <em>Max output per call</em> caps how long each AI answer can be (2,500 tokens is recommended; normal answers are 100–600), and a request whose input would exceed about 15,000 tokens is refused before it's sent. Tap the ⓘ next to the section title for a plain-language explanation of calls and tokens. A normal day is about three calls (daily briefing, weekly review, notifications) plus one per question, chart insight or workout read — the first day, while you look around, can be 10 to 20; a 12-week plan takes about 13. The on-device Apple model is free and isn't counted. For a hard spending cap, also set a monthly limit in your provider's dashboard.</p>
+    <p>Settings → AI provider shows this month's calls, tokens and an approximate cost, using your provider's own token counts when it reports them (otherwise a size-based estimate; the cost uses rough list prices and can differ from your bill). Under <em>Daily call limit</em> you can cap how many AI calls Formcast makes per day (25, 50 — recommended —, 100 or 200); once reached, the coach waits until tomorrow. Calls your provider refuses (wrong key, no credit) aren't counted. <em>Max output per call</em> caps how long each AI answer can be (2,500 tokens is recommended; normal answers are 100–600), and a request whose input would exceed about 15,000 tokens is refused before it's sent. Tap the ⓘ next to the section title for a plain-language explanation of calls and tokens. A normal day is about three calls (daily briefing, weekly review, notifications) plus one per question, chart insight or workout read — the first day, while you look around, can be 10 to 20; a 12-week plan takes about 13. The on-device Apple model is free and isn't counted. For a hard spending cap, also set a monthly limit in your provider's dashboard.</p>
   </details>
 
   <details>
@@ -193,7 +193,47 @@
 
   <details>
     <summary>My workouts from Apple Health don't show up, but Health has them</summary>
-    <p>Almost always Formcast isn't allowed to <em>read</em> workouts: steps can come through while workouts don't, and Apple gives no error for this. Open Formcast → Settings → <em>Test Apple Health connection</em>: it says whether Health was ever asked (then tap <em>Ask for Workouts access</em>) or whether Workouts is switched off. If it is off, open the iPhone Settings app → Apps → Health → Data Access &amp; Devices → Formcast, tap <em>Change Access</em> and switch <em>Workouts</em> on. Then go back to the test screen and tap <em>Import now (last 90 days)</em>. Note: apps that only <em>write</em> workouts to Health (shown under "Allow Formcast to Write") are a separate permission.</p>
+    <p>Almost always Formcast isn't allowed to <em>read</em> workouts: steps can come through while workouts don't, and Apple gives no error for this. Open Formcast → Settings → Data source → <em>Test Apple Health connection</em>: it says whether Health was ever asked (then tap <em>Ask for Workouts access</em>) or whether Workouts is switched off. If it is off, open the iPhone Settings app → Apps → Health → Data Access &amp; Devices → Formcast, tap <em>Change Access</em> and switch <em>Workouts</em> on. Then go back to the test screen and tap <em>Import now (last 90 days)</em>. Note: apps that only <em>write</em> workouts to Health (shown under "Allow Formcast to Write") are a separate permission.</p>
+  </details>
+
+  <details>
+    <summary>Where is "What's new", and can I hide the Garmin Connect card?</summary>
+    <p>After an update Formcast shows a few pages with what's new, once; you can see them again any time under Settings → <em>Latest update</em>. The "Just trained? Open Garmin Connect" card on the Dashboard has a cross to hide it; switch it back on under Settings → Sync, where you can also open Garmin Connect.</p>
+  </details>
+
+  <details>
+    <summary>How does the voice coach work?</summary>
+    <p>When you record a run, walk, hike or ride in Formcast (Activities → + → <em>Start recording</em>), switch on <em>Voice coach</em>. It tells you your pace (or speed on the bike) every kilometre or mile, and if today's plan has a session with steps — warm-up, intervals, recovery, cool-down — it walks you through them, says the average of each interval and gives a nudge when your pace stays off target. It keeps talking with the screen locked, turns your music down while it speaks, and only counts time while you're not paused. Tap <em>Voice coach on</em> during the recording to mute it. Everything is spoken on your phone; nothing is sent.</p>
+  </details>
+
+  <details>
+    <summary>Can I turn a photo of a workout into a routine?</summary>
+    <p>Yes: Gym → <em>Routine from a photo</em>, then take a photo or pick one (a whiteboard, a printed or handwritten program, a screenshot of another app). Your AI provider reads the exercises, sets, reps, rest and supersets, and the routine editor opens filled in so you can check everything before you save. This needs your own API key (Anthropic, OpenAI or Google): Apple's on-device model can't read photos. The photo is sent once to that provider and not kept.</p>
+  </details>
+
+  <details>
+    <summary>How do I track my running shoes?</summary>
+    <p>Activities → ⋯ → <em>Shoes</em> → <em>Add shoes</em>. Enter the kilometres already on them and when you want to replace them (700 km by default). New runs (and walks or hikes, if you tick them) go to your default pair by themselves; open an activity to move it to another pair. The Dashboard warns you at 90 % of the limit.</p>
+  </details>
+
+  <details>
+    <summary>What is race week?</summary>
+    <p>In the last seven days before the race date of your active plan, the Dashboard and the plan show a race-week card: the days to go, your taper sessions, a forecast of how fresh you'll be on race morning, carbohydrate loading advice for races over about 90 minutes (a general sports-nutrition guideline, not medical advice), a pace plan per kilometre (even or negative split) with split times, and a checklist you can tick off.</p>
+  </details>
+
+  <details>
+    <summary>Where are the month and year overview, the route heatmap and my records?</summary>
+    <p>Activities → ⋯ → <em>Month and year overview</em> (your totals, sports, highlights and habits, with a picture to share) or <em>Route heatmap</em> (all your routes of one sport on one map; the first time it fetches missing routes from Garmin, which can take a while). A trophy in the activity list marks a personal record, such as your fastest 5 km or your longest ride; the activity itself says which one.</p>
+  </details>
+
+  <details>
+    <summary>How do the circle bingo and the weekly look-back work?</summary>
+    <p>Each month every circle gets one bingo card, the same for everyone in it. Squares tick themselves from your own training ("a run of 10 km", "train before 7:00") or from what you do in the circle; the ones with a hand you tick yourself. There's no ranking: you see who got a full line and how many squares you hit together. Each Monday one phone in the circle writes a short look-back at last week (totals, who met their own goal, a few awards) and everyone sees that same one. The circle's owner can switch on a playful roast tone and decide whether a member's cloud AI may write it; otherwise the AI on the phone or a fixed text is used. Everyone needs build 28 or later for these.</p>
+  </details>
+
+  <details>
+    <summary>Can my activities go to a circle automatically?</summary>
+    <p>Yes, per circle: Settings → Friends → <em>Post automatically</em>. Pick the circle, the sports, whether to post every new activity or only personal records, and which details go along. It only posts activities that happen after you switch it on, and you can remove any post afterwards.</p>
   </details>
 
   <footer>Formcast is an independent, single-developer app and is not affiliated with or endorsed by Garmin Ltd., Google LLC, Fitbit LLC, or Apple Inc.</footer>
