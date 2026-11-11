@@ -117,6 +117,11 @@
   </details>
 
   <details>
+    <summary>How does Formcast decide how far I run each week?</summary>
+    <p>With fixed rules, not by the AI: the AI only writes the sessions within them. Week one starts from what you ran in the last four weeks; weeks grow by at most about 10%, every fourth week is lighter, and the plan tapers before the race (one week for a 5 or 10 km, two for a half, three for a marathon). There is at most one long run a week, and it never goes past the longest run that suits your distance and level — about 13 km for a 10 km under 50 minutes, 16 km under 40 minutes, 19 km for a 1:45 half, 32 km for a 3:30 marathon — and never past 150 minutes (180 for a marathon). Other runs stay well under the long run, and hard sessions are never the day before or after the long run, on consecutive days, or in the two days before a race. Weeks run Monday to Sunday.</p>
+  </details>
+
+  <details>
     <summary>My plan's strength days list exercises — can I start them?</summary>
     <p>Yes. Open the plan, expand a strength day with <em>Show exercises</em> and tap <em>Start this workout in Gym</em>: a gym session opens with those exercises and last time's numbers. If the AI doesn't list exercises, Formcast fills in a full-body routine (A/B). Easy runs always show distance, time and pace; plans made earlier are filled in when you open them.</p>
   </details>
@@ -133,7 +138,7 @@
 
   <details>
     <summary>Why does my PT tell me to take it easy?</summary>
-    <p>Your recent training load is higher than your body has been used to, which raises injury and burnout risk. A lighter week, with a little pace kept in, lets your fitness settle. If you'd rather not get this advice, set your aim to <em>Stay fit</em> in the PT intake, though an overloaded week will still be flagged.</p>
+    <p>Your recent training load is higher than your body has been used to, which raises injury and burnout risk. A lighter week, with a little pace kept in, lets your fitness settle. Used to a lot of training? Settings → Coach style → <em>Advice about training load</em> lets you choose <em>Careful</em>, <em>Standard</em> or <em>I can handle a lot</em>; the limits always move with your own fitness, and with the last one the coach only warns when your load is far above your normal or your heart rate variability, resting heart rate or sleep show strain. Setting your aim to <em>Stay fit</em> in the PT intake also tones the advice down, though an overloaded week will still be flagged.</p>
   </details>
 
   <details>
@@ -198,17 +203,22 @@
 
   <details>
     <summary>Where is "What's new", and can I hide the Garmin Connect card?</summary>
-    <p>After an update Formcast shows a few pages with what's new, once; you can see them again any time under Settings → <em>Latest update</em>. The "Just trained? Open Garmin Connect" card on the Dashboard has a cross to hide it; switch it back on under Settings → Sync, where you can also open Garmin Connect.</p>
+    <p>After an update Formcast shows a few pages with what's new, once (missed two updates? you see both). Settings → <em>Updates</em> keeps the pages of every update, so you can go through them again any time. The "Just trained? Open Garmin Connect" card on the Dashboard has a cross to hide it; switch it back on under Settings → Sync, where you can also open Garmin Connect.</p>
   </details>
 
   <details>
     <summary>How does the voice coach work?</summary>
-    <p>When you record a run, walk, hike or ride in Formcast (Activities → + → <em>Start recording</em>), switch on <em>Voice coach</em>. It tells you your pace (or speed on the bike) every kilometre or mile, and if today's plan has a session with steps — warm-up, intervals, recovery, cool-down — it walks you through them, says the average of each interval and gives a nudge when your pace stays off target. It keeps talking with the screen locked, turns your music down while it speaks, and only counts time while you're not paused. Tap <em>Voice coach on</em> during the recording to mute it. Everything is spoken on your phone; nothing is sent.</p>
+    <p>When you record a run, walk, hike or ride in Formcast (Activities → + → <em>Start recording</em>), switch on <em>Voice coach</em>. It tells you your pace (or speed on the bike) every kilometre or mile. Under <em>Guide me through</em> you pick a planned session with steps — today's is chosen for you, but any session from three days back to a week ahead works, so a Wednesday tempo run can be done on Thursday — and it walks you through warm-up, intervals, recovery and cool-down, says the average of each interval and gives a nudge when your pace stays off target. It keeps talking with the screen locked, turns your music down while it speaks, and only counts time while you're not paused. Tap <em>Voice coach on</em> during the recording to mute it. Everything is spoken on your phone; nothing is sent. Tip: the voice iOS starts with sounds robotic; download a better one under iPhone Settings → Accessibility → Spoken Content → Voices (pick your language and an "Enhanced" or "Premium" voice) and Formcast uses it automatically.</p>
   </details>
 
   <details>
     <summary>Can I turn a photo of a workout into a routine?</summary>
     <p>Yes: Gym → <em>Routine from a photo</em>, then take a photo or pick one (a whiteboard, a printed or handwritten program, a screenshot of another app). Your AI provider reads the exercises, sets, reps, rest and supersets, and the routine editor opens filled in so you can check everything before you save. This needs your own API key (Anthropic, OpenAI or Google): Apple's on-device model can't read photos. The photo is sent once to that provider and not kept.</p>
+  </details>
+
+  <details>
+    <summary>Can I bring in my lifts from a spreadsheet, notes or another app?</summary>
+    <p>Yes: Gym → <em>Import lifts from your log</em> (also at the bottom of Strength progress). Pick screenshots (long ones are fine, up to 10), a CSV, text or PDF file, or copy the cells in Google Sheets or Excel and tap <em>Paste copied cells</em>. Your AI provider reads every exercise with its reps, weight and RPE — notation like <code>8,8,8 (100kg)@7</code> or <code>10,10 (15kg/ps)@10</code> works — and you see a review first: the sessions it found, which ones go on a strength workout you recorded that day (or the day before or after) and which become new sessions. If your log counts in weeks, set the Monday of week 1. Importing the same log again updates what came from it, without doubles, and you can undo your last import from the same screen. This needs your own API key (Anthropic, OpenAI or Google); what you pick is sent once and not kept. Big log? Import one tab or a few weeks at a time.</p>
   </details>
 
   <details>
